@@ -22,19 +22,35 @@ function initGround () {
         `, SpriteKind.ground)
     ground1.setPosition(scene.screenWidth() / 2, 100)
 }
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     ninja,
-    assets.animation`myAnim0`,
-    50,
+    assets.animation`animRunUp`,
+    200,
     false
     )
 })
-controller.A.onEvent(ControllerButtonEvent.Released, function () {
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     ninja,
-    assets.animation`myAnim5`,
-    50,
+    assets.animation`animRunDown`,
+    200,
+    false
+    )
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    ninja,
+    assets.animation`animRunDown`,
+    200,
+    false
+    )
+})
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    ninja,
+    assets.animation`animRunDown`,
+    200,
     false
     )
 })
@@ -42,9 +58,9 @@ let ground1: Sprite = null
 let ninja: Sprite = null
 scene.setBackgroundColor(6)
 tiles.setCurrentTilemap(tilemap`map-demo`)
-ninja = sprites.create(assets.image`myImage`, SpriteKind.Player)
+ninja = sprites.create(assets.image`myImage1`, SpriteKind.Player)
 tiles.placeOnRandomTile(ninja, sprites.castle.rock2)
 scene.cameraFollowSprite(ninja)
-controller.moveSprite(ninja, 80, 80)
+controller.moveSprite(ninja, 65, 65)
 ninja.setStayInScreen(true)
 info.player1.setLife(3)
