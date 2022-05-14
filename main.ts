@@ -33,7 +33,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     ninja,
-    assets.animation`animRunDown`,
+    assets.animation`animRunLeft`,
     200,
     false
     )
@@ -41,7 +41,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     ninja,
-    assets.animation`animRunDown`,
+    assets.animation`animRunRight`,
     200,
     false
     )
