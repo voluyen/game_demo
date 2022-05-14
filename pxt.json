@@ -4,7 +4,9 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "animation": "*"
+        "animation": "*",
+        "darts": "*",
+        "servo": "*"
     },
     "files": [
         "main.blocks",
