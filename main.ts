@@ -23,6 +23,30 @@ function initGround () {
     ground1.setPosition(scene.screenWidth() / 2, 100)
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    let mySprite: Sprite = null
+    characterAnimations.runFrames(
+    mySprite,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    500,
+    characterAnimations.rule(Predicate.NotMoving, Predicate.NotMoving)
+    )
     animation.runImageAnimation(
     ninja,
     assets.animation`animRunUp`,
@@ -63,4 +87,4 @@ tiles.placeOnRandomTile(ninja, sprites.castle.rock2)
 scene.cameraFollowSprite(ninja)
 controller.moveSprite(ninja, 65, 65)
 ninja.setStayInScreen(true)
-info.player1.setLife(3)
+let statusbar = statusbars.create(20, 4, StatusBarKind.Health)
