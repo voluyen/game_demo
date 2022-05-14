@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const ground = SpriteKind.create()
 }
+statusbars.onZero(StatusBarKind.Health, function (status) {
+    game.over(false)
+})
 function AnimationMoving () {
     characterAnimations.runFrames(
     ninja,
@@ -27,6 +30,11 @@ function AnimationMoving () {
     characterAnimations.rule(Predicate.MovingRight)
     )
 }
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd1, function (sprite, location) {
+    statusbar.value += -1
+    pause(200)
+})
+let statusbar: StatusBarSprite = null
 let ninja: Sprite = null
 scene.setBackgroundColor(6)
 tiles.setCurrentTilemap(tilemap`map-demo`)
@@ -36,4 +44,7 @@ AnimationMoving()
 scene.cameraFollowSprite(ninja)
 controller.moveSprite(ninja, 65, 65)
 ninja.setStayInScreen(true)
-info.player1.setLife(3)
+statusbar = statusbars.create(20, 4, StatusBarKind.Health)
+statusbar.setColor(7, 2)
+statusbar.max = 10
+statusbar.attachToSprite(ninja, 0, 0)
