@@ -40,7 +40,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, ninja, 0, -100)
+            `, ninja, -100, 0)
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
