@@ -26,6 +26,34 @@ namespace myTiles {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `, [myTiles.transparency16,sprites.castle.tileGrass2,sprites.castle.tileGrass1,sprites.builtin.forestTiles0,sprites.swamp.swampTile1,sprites.swamp.swampTile0,sprites.swamp.swampTile2,sprites.castle.saplingPine,sprites.castle.shrub,sprites.castle.rock0,sprites.castle.rock2,sprites.dungeon.stairLarge,sprites.dungeon.purpleOuterWest2,sprites.builtin.forestTiles1,sprites.builtin.forestTiles3,sprites.builtin.forestTiles2,sprites.dungeon.collectibleRedCrystal,myTiles.tile1], TileScale.Sixteen);
+            case "tilemap1":
+            case "tilemap1":return tiles.createTilemap(hex`19001900020303030303030303030303030303030303030303030303040a0110101010101010101010101010101010101010101011050b0f15151515151515151515151515151515151515151514050b0f15151515151515151515151515151515151515151514050a0f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090f1515151515151515151515151515151515151515151405090e1313131313131313131313131313131313131313131205080707070707070707070707070707070707070d0c0c0d0706`, img`
+2222222222222222222222222
+2.......................2
+........................2
+........................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+2.......................2
+22222222222222222222..222
+`, [myTiles.transparency16,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.purpleOuterNorthWest,sprites.dungeon.purpleOuterNorth0,sprites.dungeon.purpleOuterNorthEast,sprites.dungeon.purpleOuterEast0,sprites.dungeon.purpleOuterSouthWest,sprites.dungeon.purpleOuterSouth0,sprites.dungeon.purpleOuterSouthEast,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterWest2,sprites.dungeon.stairWest,sprites.dungeon.stairSouth,sprites.dungeon.purpleOuterSouth2,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundCenter], TileScale.Sixteen);
         }
         return null;
     })
