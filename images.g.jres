@@ -24,6 +24,21 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage3"
     },
+    "5)Q3*zC%,l63o)6HU)|w": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAPAAAAAAAAAPAAAAAAAAAA/wDwAAAAAP//Dw8AAADw8P//AAAAAA8A/wAAAAAAAAAPAAAAAAAAAPAAAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "phi_tieu"
+    },
+    "image6": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "dame1"
+    },
+    "image7": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADu7ncHAAAAAO7uFwcAAAAA7u53BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO7udwcAAAAA7u4XBwAAAADu7ncHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "weapon1"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",
