@@ -44,6 +44,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "monster1"
     },
+    "image9": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADMzMwAAAAAwLu7uwwAAADAa2a2zswMAMBrn7muuMsAwGv5uY7KDADAa/m5rsgAAMBrn7mOygAAzGuZub7LDMDAu7u77r7LDMCqqqrOzAwMwKqqqgwAAAAAzMzMAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "monster2"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",
