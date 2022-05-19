@@ -3,6 +3,12 @@ namespace SpriteKind {
     export const Weapon = SpriteKind.create()
     export const Start = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
+    currentLevel += 1
+    if (currentLevel != numberOfLevel) {
+        setLevelMap(currentLevel)
+    }
+})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (rightdir == true) {
         projectile = sprites.createProjectileFromSprite(assets.image`phi_tieu`, ninja, 100, 0)
@@ -51,11 +57,12 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     rightdir = false
 })
 function setMain () {
+    tiles.placeOnTile(ninja, tiles.getTileLocation(0, 1))
     info.setScore(0)
 }
 function mainDie () {
     info.changeLifeBy(-1)
-    tiles.placeOnRandomTile(ninja, sprites.castle.rock2)
+    tiles.placeOnTile(ninja, tiles.getTileLocation(0, 1))
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     rightdir = true
@@ -64,44 +71,8 @@ function setLevelMap (lv: number) {
     clearMap()
     if (lv == 1) {
         tiles.setCurrentTilemap(tilemap`map-demo`)
-        place_start = img`
-            . . b d b . . . . . b b b b . . 
-            . c b d d b . . . b b d d d b . 
-            . b c c b . . . b c d d d d b . 
-            . . . . . . b b c c b d b b b . 
-            . . . . . b d d b c c b b b c . 
-            . . b b b c d d b b c c c c . . 
-            . b d d d b c b b c . . . . . . 
-            c b d d d d c c c c . b b b . . 
-            c c b b b b c c c . b d d d b . 
-            . c c c b b . . b c b b d d b b 
-            . b b . . . . . b c c b b b b . 
-            b d d b b . . . . . c c c b . . 
-            b b d d b c . . b b b b b b b . 
-            . b c c c b . b d d d b b c b . 
-            . . . . . . b d d d b c c b . . 
-            . . . . . . b b b c c c b . . . 
-            `
     } else {
         tiles.setCurrentTilemap(tilemap`tilemap1`)
-        place_start = img`
-            . . b d b . . . . . b b b b . . 
-            . c b d d b . . . b b d d d b . 
-            . b c c b . . . b c d d d d b . 
-            . . . . . . b b c c b d b b b . 
-            . . . . . b d d b c c b b b c . 
-            . . b b b c d d b b c c c c . . 
-            . b d d d b c b b c . . . . . . 
-            c b d d d d c c c c . b b b . . 
-            c c b b b b c c c . b d d d b . 
-            . c c c b b . . b c b b d d b b 
-            . b b . . . . . b c c b b b b . 
-            b d d b b . . . . . c c c b . . 
-            b b d d b c . . b b b b b b b . 
-            . b c c c b . b d d d b b c b . 
-            . . . . . . b d d d b c c b . . 
-            . . . . . . b b b c c c b . . . 
-            `
     }
     setMain()
 }
@@ -118,21 +89,23 @@ function clearMap () {
         value.destroy()
     }
 }
-let place_start: Image = null
 let projectile5: Sprite = null
 let projectile2: Sprite = null
 let projectile: Sprite = null
 let rightdir = false
 let dame: Sprite = null
+let currentLevel = 0
+let numberOfLevel = 0
 let ninja: Sprite = null
 scene.setBackgroundColor(6)
 ninja = sprites.create(assets.image`myImage1`, SpriteKind.Player)
-let currentLevel = 1
-setLevelMap(1)
 scene.cameraFollowSprite(ninja)
 controller.moveSprite(ninja, 65, 65)
 ninja.setStayInScreen(true)
 info.setLife(3)
+numberOfLevel = 2
+currentLevel = 1
+setLevelMap(currentLevel)
 let weapon1 = sprites.create(assets.image`weapon1`, SpriteKind.Weapon)
 tiles.placeOnRandomTile(weapon1, assets.tile`weapon1`)
 while (true) {
