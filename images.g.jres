@@ -39,6 +39,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "weapon1"
     },
+    "image8": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAADQu7sAAAAA0LnuvgAAAACda2bGCwAAALlm/2a2AACQa2Zm9sYLAJ3rZv9mxgsAnctmZmbGCwCdu2ZmZrwLAN27y2bGuwAA0Li77ryLAADQjbu7uwgAAADdiLuLAAAAAACAiAgAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "monster1"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",
